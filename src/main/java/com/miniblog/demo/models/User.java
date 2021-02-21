@@ -18,6 +18,7 @@ public class User extends BaseModel{
     @NotBlank
     @Size(min = 5, message = "username cannot be less than 5 characters")
     private String username;
+    private String password;
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Post> postList;
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
